@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 
 
 
-public class LoginPage {
+public class LoginPage extends BasePage{
 
     @FindBy(id = "myAccount")
-    public WebElement myAccount;
+    public WebElement signIn;
 
     @FindBy(id="login")
     public WebElement login;

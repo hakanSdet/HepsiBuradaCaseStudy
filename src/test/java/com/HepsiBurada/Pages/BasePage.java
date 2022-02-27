@@ -7,23 +7,20 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public  class BasePage {
+public abstract class BasePage {
 
     public BasePage() {
         PageFactory.initElements(Driver.get(), this );
     }
 
-    @FindBy(css = "#button-cart")
-    public WebElement addChartLocator;
+    @FindBy(xpath = "//*[.='Hesabım']")
+    public static WebElement myAccount;
 
-    @FindBy(css="#cart-total")
-    public WebElement itemsLocator;
+    @FindBy(xpath = "//*[@value]")
+    public static WebElement searchBox;
 
-    @FindBy(xpath = "//*[@id=\"cart\"]/ul/li[2]/div/p/a[1]/strong")
-    public WebElement viewChartLocator;
-
-    @FindBy(xpath = "//a[contains(text(),'Estimate')]")
-    public WebElement estimateShippingTaxesLocator;
+    @FindBy(css = "#SearchBoxOld div.SearchBoxOld-buttonContainer")
+    public static WebElement search;
 
     @FindBy(id = "input-country")
     public WebElement selectCountry;
