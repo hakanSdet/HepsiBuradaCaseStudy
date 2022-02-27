@@ -1,6 +1,5 @@
 package com.HepsiBurada.StepDefinitions;
 
-import com.HepsiBurada.Utilities.ConfigurationReader;
 import com.HepsiBurada.Utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -11,13 +10,14 @@ import org.openqa.selenium.TakesScreenshot;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
-    @Before
+
+    @Before("@ui")
     public void setUp(){
         Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
-    @After
+    @After("@ui")
     public void tearDown(Scenario scenario){
         if (scenario.isFailed()){
             final byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);

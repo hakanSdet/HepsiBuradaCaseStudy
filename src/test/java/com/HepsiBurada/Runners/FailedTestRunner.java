@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"json:target/failedcucumber.json",
                 "html:target/failed-html-report"},
         features = "@target/rerun.txt",
-        glue = "com\\HepsiBurada\\stepdefnitions"
+        glue = "com/HepsiBurada/stepdefnitions"
 )
 
 public class FailedTestRunner {

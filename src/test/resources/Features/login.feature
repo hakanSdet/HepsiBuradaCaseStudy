@@ -11,9 +11,10 @@ Feature: Login functionality
     Then User can see his-her full name on My Account page
 
     Examples:
-      | username              | password |
-      | hkahraman96@gmail.com | 0011096  |
-
+      | username              | password  |
+      | hkahraman96@gmail.com | 0011096   |
+      | 5541245668            | 255364    |
+      | 05541245668           | ab,255364 |
 
   Scenario Outline: Login with valid credentials (Enter Button)
     Given User navigates to login page

@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"},
         features = "src/test/resources/features",
         glue = "com/HepsiBurada/StepDefinitions",
-        dryRun = true,
+        dryRun = false,
         tags= ""
 
 )

@@ -8,7 +8,7 @@ public class ProductPage extends BasePage {
     @FindBy(id = "i0")
     public WebElement firstProduct;
 
-    @FindBy(xpath ="//*[@id=\"merchantTabTrigger\"]/a/span")
+    @FindBy(id ="merchantTabTrigger")
     public WebElement allSeller;
 
     @FindBy(xpath = "//*[@id=\"merchant-list\"]//tr[3]/td[4]/form/button")
@@ -20,8 +20,11 @@ public class ProductPage extends BasePage {
     @FindBy(css = ".checkoutui-Modal-2iZXl")
     public WebElement closeSign;
 
-    @FindBy(xpath = "//*[contains(text(),'Sepete git')]")
-    public WebElement goMyCart;
+    @FindBy(xpath = "//*[@id=\"merchant-list\"]//tr[3]//div/a[2]")
+    public WebElement expectedProduct1;
+
+    @FindBy(xpath = "//*[@id=\"merchant-list\"]//tr[4]//div/a[2]")
+    public WebElement expectedProduct2;
 
 
 
