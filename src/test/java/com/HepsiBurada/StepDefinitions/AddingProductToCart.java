@@ -63,7 +63,6 @@ public class AddingProductToCart {
     }
     @And("User can choose from the list of products displayed as a result of the Search")
     public void user_can_choose_from_the_list_of_products_displayed_as_a_result_of_the_Search() {
-       //BrowserUtils.switchToWindow();
        scrollToElement(productPage.firstProduct);
        waitForPageToLoad(5);
        productPage.firstProduct.click();
